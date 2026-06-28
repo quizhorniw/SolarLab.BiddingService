@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Application\SolarLab.BiddingService.Application\SolarLab.BiddingService.Application.csproj" />
+      <ProjectReference Include="..\..\Domain\SolarLab.BiddingService.Domain\SolarLab.BiddingService.Domain.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\SolarLab.BiddingService.Infrastructure.ComponentRegistrar\SolarLab.BiddingService.Infrastructure.ComponentRegistrar.csproj" />
+    </ItemGroup>
+
+</Project>
