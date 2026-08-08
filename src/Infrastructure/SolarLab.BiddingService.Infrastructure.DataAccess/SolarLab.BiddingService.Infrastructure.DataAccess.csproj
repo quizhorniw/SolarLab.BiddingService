@@ -7,8 +7,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\net10.0\SolarLab.BiddingService.Infrastructure.DataAccess.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.2" />
+      <PackageReference Include="EFCore.NamingConventions" Version="10.0.1" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
     </ItemGroup>
 
     <ItemGroup>

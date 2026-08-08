@@ -8,13 +8,12 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.3" />
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.2.3" />
-    </ItemGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\net10.0\SolarLab.BiddingService.Hosts.PublicApi.xml</DocumentationFile>
+    </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\..\..\..\.dockerignore">
+      <Content Include="..\..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
@@ -23,6 +22,11 @@
       <ProjectReference Include="..\..\Application\SolarLab.BiddingService.Application\SolarLab.BiddingService.Application.csproj" />
       <ProjectReference Include="..\..\Domain\SolarLab.BiddingService.Domain\SolarLab.BiddingService.Domain.csproj" />
       <ProjectReference Include="..\..\Infrastructure\SolarLab.BiddingService.Infrastructure.ComponentRegistrar\SolarLab.BiddingService.Infrastructure.ComponentRegistrar.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+      <PackageReference Include="Scalar.AspNetCore" Version="2.16.15" />
     </ItemGroup>
 
 </Project>

@@ -6,6 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DocumentationFile>bin\Debug\net10.0\SolarLab.BiddingService.Domain.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net10.0\SolarLab.BiddingService.Contracts.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
